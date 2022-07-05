@@ -1,6 +1,6 @@
 #include "MainWindow.h"
 
-MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100, 100), wxSize(500, 640)) 
+MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100, 100), wxSize(517, 640)) 
 {
 	textBox = new wxTextCtrl(this, 0, "", wxPoint(0, 0), wxSize(500, 100));
 
