@@ -29,7 +29,7 @@ private:
 	wxTextCtrl* textBox;
 public:
 	MainWindow();
-	void OnButtonClick(wxCommandEvent& evt);
 	DECLARE_EVENT_TABLE()
+	void OnButtonClick(wxCommandEvent& evt);
 };
 
