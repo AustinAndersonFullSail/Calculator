@@ -1,5 +1,9 @@
 #include "MainWindow.h"
 
+wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
+
+wxEND_EVENT_TABLE()
+
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100, 100), wxSize(517, 640)) 
 {
 	textBox = new wxTextCtrl(this, 0, "", wxPoint(0, 0), wxSize(500, 100));
@@ -25,4 +29,10 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100,
 	buttonNeg = new wxButton(this, 19, "Negative", wxPoint(300, 400), wxSize(100, 100));
 	buttonDivide = new wxButton(this, 20, "/", wxPoint(400, 400), wxSize(100, 100));
 	buttonEquals = new wxButton(this, 21, "=", wxPoint(0, 500), wxSize(500, 100));
+
+}
+
+void MainWindow::OnButtonClick(wxCommandEvent& evt)
+{
+
 }
