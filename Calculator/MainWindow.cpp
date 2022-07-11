@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 
+
 wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
 EVT_BUTTON(1, MainWindow::OnButtonClick)
 EVT_BUTTON(2, MainWindow::OnButtonClick)
@@ -26,10 +27,12 @@ wxEND_EVENT_TABLE()
 
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100, 100), wxSize(517, 640)) 
 {
+	ButtonFactory buttonFactory;
+
 	textBox = new wxTextCtrl(this, 0, "", wxPoint(0, 0), wxSize(500, 100));
 
-	buttonC = new wxButton(this, 1, "C", wxPoint(0,100), wxSize(100,100));
-	button1 = new wxButton(this, 2, "1", wxPoint(100, 100), wxSize(100, 100));
+	buttonC = buttonFactory.CreateButtonClear();
+	button1 = buttonFactory.CreateButton1();
 	button2 = new wxButton(this, 3, "2", wxPoint(200, 100), wxSize(100, 100));
 	button3 = new wxButton(this, 4, "3", wxPoint(300, 100), wxSize(100, 100));
 	buttonPlus = new wxButton(this, 5, "+", wxPoint(400, 100), wxSize(100, 100));
