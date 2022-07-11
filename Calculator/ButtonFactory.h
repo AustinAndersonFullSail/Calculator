@@ -5,6 +5,8 @@
 class ButtonFactory
 {
 public:
+	wxTextCtrl* CreateTextBox(wxWindow* parent);
+
 	wxButton* CreateButtonClear(wxWindow* parent);
 	wxButton* CreateButton1(wxWindow* parent);
 	wxButton* CreateButton2(wxWindow* parent);

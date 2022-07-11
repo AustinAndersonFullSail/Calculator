@@ -1,5 +1,11 @@
 #include "ButtonFactory.h"
 
+wxTextCtrl* ButtonFactory::CreateTextBox(wxWindow* parent)
+{
+	wxTextCtrl* textBox = new wxTextCtrl(parent, 0, "", wxPoint(0, 0), wxSize(500, 100));
+	return textBox;
+}
+
 wxButton* ButtonFactory::CreateButtonClear(wxWindow* parent)
 {
 	wxButton* buttonC = new wxButton(parent, 1, "C", wxPoint(0, 100), wxSize(100, 100));
