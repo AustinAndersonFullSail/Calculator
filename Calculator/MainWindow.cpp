@@ -31,7 +31,7 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100,
 
 	textBox = new wxTextCtrl(this, 0, "", wxPoint(0, 0), wxSize(500, 100));
 
-	buttonC = buttonFactory.CreateButtonClear();
+	buttonC = buttonFactory.CreateButtonClear(this);
 	button1 = buttonFactory.CreateButton1();
 	button2 = buttonFactory.CreateButton2();
 	button3 = buttonFactory.CreateButton3();
