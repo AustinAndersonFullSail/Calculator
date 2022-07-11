@@ -3,7 +3,6 @@
 wxButton* ButtonFactory::CreateButtonClear(wxWindow* parent)
 {
 	wxButton* buttonC = new wxButton(parent, 1, "C", wxPoint(0, 100), wxSize(100, 100));
-	//textBox->Clear();
 	return buttonC;
 }
 wxButton* ButtonFactory::CreateButton1(wxWindow* parent)
@@ -53,7 +52,7 @@ wxButton* ButtonFactory::CreateButtonMinus(wxWindow* parent)
 }
 wxButton* ButtonFactory::CreateButtonHexadecimal(wxWindow* parent)
 {
-	wxButton* buttonHex = new wxButton(nulparentlptr, 11, "Hexadecimal", wxPoint(0, 300), wxSize(100, 100));
+	wxButton* buttonHex = new wxButton(parent, 11, "Hexadecimal", wxPoint(0, 300), wxSize(100, 100));
 	return buttonHex;
 }
 wxButton* ButtonFactory::CreateButton7(wxWindow* parent)

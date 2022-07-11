@@ -32,26 +32,26 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100,
 	textBox = new wxTextCtrl(this, 0, "", wxPoint(0, 0), wxSize(500, 100));
 
 	buttonC = buttonFactory.CreateButtonClear(this);
-	button1 = buttonFactory.CreateButton1();
-	button2 = buttonFactory.CreateButton2();
-	button3 = buttonFactory.CreateButton3();
-	buttonPlus = buttonFactory.CreateButtonPlus();
-	buttonBin = buttonFactory.CreateButtonBinary();
-	button4 = buttonFactory.CreateButton4();
-	button5 = buttonFactory.CreateButton5();
-	button6 = buttonFactory.CreateButton6();
-	buttonMinus = buttonFactory.CreateButtonMinus();
-	buttonHex = buttonFactory.CreateButtonHexadecimal();
-	button7 = buttonFactory.CreateButton7();
-	button8 = buttonFactory.CreateButton8();
-	button9 = buttonFactory.CreateButton9();
-	buttonMultiply = buttonFactory.CreateButtonMultiply();
-	buttonDec = buttonFactory.CreateButtonDecimal();
-	buttonMod = buttonFactory.CreateButtonMod();
-	button0 = buttonFactory.CreateButton0();
-	buttonNeg = buttonFactory.CreateButtonNegative();
-	buttonDivide = buttonFactory.CreateButtonDivide();
-	buttonEquals = buttonFactory.CreateButtonEquals();
+	button1 = buttonFactory.CreateButton1(this);
+	button2 = buttonFactory.CreateButton2(this);
+	button3 = buttonFactory.CreateButton3(this);
+	buttonPlus = buttonFactory.CreateButtonPlus(this);
+	buttonBin = buttonFactory.CreateButtonBinary(this);
+	button4 = buttonFactory.CreateButton4(this);
+	button5 = buttonFactory.CreateButton5(this);
+	button6 = buttonFactory.CreateButton6(this);
+	buttonMinus = buttonFactory.CreateButtonMinus(this);
+	buttonHex = buttonFactory.CreateButtonHexadecimal(this);
+	button7 = buttonFactory.CreateButton7(this);
+	button8 = buttonFactory.CreateButton8(this);
+	button9 = buttonFactory.CreateButton9(this);
+	buttonMultiply = buttonFactory.CreateButtonMultiply(this);
+	buttonDec = buttonFactory.CreateButtonDecimal(this);
+	buttonMod = buttonFactory.CreateButtonMod(this);
+	button0 = buttonFactory.CreateButton0(this);
+	buttonNeg = buttonFactory.CreateButtonNegative(this);
+	buttonDivide = buttonFactory.CreateButtonDivide(this);
+	buttonEquals = buttonFactory.CreateButtonEquals(this);
 
 }
 
