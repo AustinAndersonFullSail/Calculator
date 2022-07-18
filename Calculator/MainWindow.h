@@ -1,6 +1,7 @@
 #pragma once
 #include "wx/wx.h"
 #include "ButtonFactory.h"
+#include "CalculatorProcessor.h"
 
 class MainWindow : public wxFrame
 {
@@ -28,6 +29,8 @@ private:
 	wxButton* buttonEquals;
 
 	wxTextCtrl* textBox;
+
+	CalculatorProcessor* processor = nullptr;
 public:
 	MainWindow();
 	DECLARE_EVENT_TABLE()

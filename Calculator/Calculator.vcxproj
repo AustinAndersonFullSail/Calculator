@@ -151,8 +151,8 @@
   <ItemGroup>
     <ClCompile Include="App.cpp" />
     <ClCompile Include="ButtonFactory.cpp" />
-    <ClCompile Include="CalculatorProcessor.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="CalculatorProcessor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

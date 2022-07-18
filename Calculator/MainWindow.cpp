@@ -1,6 +1,5 @@
 #include "MainWindow.h"
 
-
 wxBEGIN_EVENT_TABLE(MainWindow, wxFrame)
 EVT_BUTTON(1, MainWindow::OnButtonClick)
 EVT_BUTTON(2, MainWindow::OnButtonClick)
@@ -27,6 +26,8 @@ wxEND_EVENT_TABLE()
 
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100, 100), wxSize(517, 640)) 
 {
+	processor = CalculatorProcessor::GetInstance();
+
 	ButtonFactory buttonFactory;
 
 	textBox = buttonFactory.CreateTextBox(this);
@@ -80,7 +81,7 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 			break;
 		}
 		case 6: {
-			textBox->GetLabel(); //***********************to binary
+			//processor->GetBinary(); //***********************to binary
 			break;
 		}
 		case 7: {
