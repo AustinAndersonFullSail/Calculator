@@ -30,7 +30,7 @@ private:
 
 	wxTextCtrl* textBox;
 
-	CalculatorProcessor* processor = nullptr;
+	CalculatorProcessor* processor = CalculatorProcessor::GetInstance();
 public:
 	MainWindow();
 	DECLARE_EVENT_TABLE()

@@ -26,7 +26,7 @@ wxEND_EVENT_TABLE()
 
 MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100, 100), wxSize(517, 640)) 
 {
-	processor = CalculatorProcessor::GetInstance();
+	
 
 	ButtonFactory buttonFactory;
 
@@ -81,7 +81,8 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 			break;
 		}
 		case 6: {
-			//processor->GetBinary(); //***********************to binary
+			textBox->Clear();
+			textBox->AppendText(processor->GetBinary()); //***********************to binary
 			break;
 		}
 		case 7: {

@@ -56,7 +56,8 @@ std::string CalculatorProcessor::GetBinary() {
 	std::string results = "";
 	int number = _baseNumber;
 
-	while (number != 0) {
+	for (int i = 0; i < 32; i++)
+	{
 		if (number % 2 == 0) {
 			results = "0" + results;
 		}
@@ -66,4 +67,24 @@ std::string CalculatorProcessor::GetBinary() {
 		number = number / 2;
 	}
 	return results;
+}
+
+int CalculatorProcessor::Multiply() {
+
+	return 0;
+}
+
+int CalculatorProcessor::Divide() {
+
+	return 0;
+}
+
+int CalculatorProcessor::Plus() {
+
+	return 0;
+}
+
+int CalculatorProcessor::Minus() {
+
+	return 0;
 }
