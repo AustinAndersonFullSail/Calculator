@@ -6,12 +6,13 @@ class CalculatorProcessor
 
 private:
 	static CalculatorProcessor* _processor;
-	int _baseNumber;
+	int _baseNumber = 0;
 	CalculatorProcessor() {}
 public:
 	static CalculatorProcessor* GetInstance();
 
 	void SetBaseNumber(int number);
+	int GetBaseNumber();
 
 	CalculatorProcessor(CalculatorProcessor& copy) = delete;
 	void operator=(const CalculatorProcessor& assignment) = delete;

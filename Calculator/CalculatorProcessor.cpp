@@ -13,6 +13,10 @@ void CalculatorProcessor::SetBaseNumber(int number) {
 	_baseNumber = number;
 }
 
+int CalculatorProcessor::GetBaseNumber() {
+	return _baseNumber;
+}
+
 std::string CalculatorProcessor::GetDecimal() {
 	return std::to_string(_baseNumber);
 }
@@ -44,27 +48,32 @@ std::string CalculatorProcessor::GetHexadecimal() {
 			results = "A" + results;
 			break;
 		default:
-			results = std::to_string(remainder);
+			results = std::to_string(remainder) + results;
 			break;
 		}
-		number = number / 16 - remainder;
+		number = number / 16;
 	}
+
+	results = "0x" + results;
 	return results;
 }
 
 std::string CalculatorProcessor::GetBinary() {
 	std::string results = "";
 	int number = _baseNumber;
+	int count = 0;
 
-	for (int i = 0; i < 32; i++)
+	while (number != 0)
 	{
-		if (number % 2 == 0) {
+		if (count % 4 == 0)
+			results = " " + results;
+
+		if (number % 2 == 0)
 			results = "0" + results;
-		}
-		else {
+		else 
 			results = "1" + results;
-		}
 		number = number / 2;
+		count++;
 	}
 	return results;
 }
