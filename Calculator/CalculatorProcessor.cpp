@@ -94,26 +94,6 @@ std::string CalculatorProcessor::GetBinary() {
 	return results;
 }
 
-//int CalculatorProcessor::Multiply() {
-//
-//return 0;
-//
-//
-//int CalculatorProcessor::Divide() {
-//
-//return 0;
-//
-//
-//int CalculatorProcessor::Plus() {
-//
-//return 0;
-//
-//
-//int CalculatorProcessor::Minus() {
-//
-//return 0;
-//}
-
 int CalculatorProcessor::Equals() {
 	if (_operator == '+')
 		return _baseNumber + _secondNumber;
