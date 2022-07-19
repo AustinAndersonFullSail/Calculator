@@ -75,7 +75,10 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 5: {
-		textBox->AppendText("+");  // ***************************add8tion
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		textBox->AppendText("+");
+		textBox->Clear();
+		processor->SetOperator('+');
 		break;
 	}
 	case 6: {
@@ -97,7 +100,10 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 10: {
-		textBox->AppendText("-");  //**********************Minus
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		textBox->AppendText("-");
+		textBox->Clear();
+		processor->SetOperator('-');
 		break;
 	}
 	case 11: {
@@ -119,7 +125,10 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 15: {
-		textBox->AppendText("*");  //***********************Multiply
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		textBox->AppendText("*");
+		textBox->Clear();
+		processor->SetOperator('*');
 		break;
 	}
 	case 16: {
@@ -128,7 +137,10 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 17: {
-		textBox->AppendText("%"); //********************MOD
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		textBox->AppendText("%");
+		textBox->Clear();
+		processor->SetOperator('%');
 		break;
 	}
 	case 18: {
@@ -136,15 +148,27 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 19: {
-		textBox->AppendText("-"); //*******************negative
+		int number = wxAtoi(textBox->GetValue().ToStdString());
+		wxString output;
+		textBox->Clear();
+		if (number > 0)
+			textBox->AppendText(output << (number - (number * 2)));
+		else
+			textBox->AppendText(output << (number + (number * 2)));
 		break;
 	}
 	case 20: {
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
 		textBox->AppendText("/");
+		textBox->Clear();
+		processor->SetOperator('/');
 		break;
 	}
 	case 21: {
-		textBox->AppendText("=");  //*****************equals
+		processor->SetSecondNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		textBox->AppendText("=");
+		textBox->Clear();
+		textBox->AppendText(std::to_string(processor->Equals()));
 		break;
 	}
 	}
