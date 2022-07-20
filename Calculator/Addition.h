@@ -2,14 +2,17 @@
 #include "IBaseCommand.h"
 
 class Addition : public IBaseCommand
-{
+{private:
+	int number;
 public:
 	int Add(int num1, int num2) {
-		return num1 + num2;
+		return number + num2;
 	}
 
-	void Execute(int base, int second) {
-		Add(base, second);
+	int Execute(int base, int second) {
+		return Add(base, second);
 	}
+
+	void SetNumber(int other) { number = other; }
 };
 

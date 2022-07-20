@@ -3,6 +3,6 @@
 class IBaseCommand
 {
 public:
-	virtual void Execute(int base, int second) = 0;
+	virtual int Execute(int base, int second) = 0;
 };
 

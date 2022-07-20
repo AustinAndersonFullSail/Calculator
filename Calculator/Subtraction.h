@@ -8,8 +8,8 @@ public:
 		return num1 - num2;
 	}
 
-	void Execute(int base, int second) {
-		Subtract(base, second);
+	int Execute(int base, int second) {
+		return Subtract(base, second);
 	}
 };
 
