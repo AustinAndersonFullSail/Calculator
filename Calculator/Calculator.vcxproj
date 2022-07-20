@@ -155,16 +155,11 @@
     <ClInclude Include="Subtraction.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Addition.cpp" />
     <ClCompile Include="App.cpp" />
     <ClCompile Include="ButtonFactory.cpp" />
-    <ClCompile Include="Division.cpp" />
     <ClCompile Include="IBaseCommand.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="CalculatorProcessor.cpp" />
-    <ClCompile Include="Mod.cpp" />
-    <ClCompile Include="Multiplication.cpp" />
-    <ClCompile Include="Subtraction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
