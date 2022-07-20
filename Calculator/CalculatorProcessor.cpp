@@ -106,3 +106,7 @@ int CalculatorProcessor::Equals() {
 	else if (_operator == '%')
 		return _baseNumber % _secondNumber;
 }
+
+void Execute() {
+	CalculatorProcessor::Equals();
+}

@@ -28,8 +28,6 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100,
 {
 	ButtonFactory buttonFactory;
 
-	std::vector<IBaseCommand*> commands;
-
 	textBox = buttonFactory.CreateTextBox(this);
 
 	buttonC = buttonFactory.CreateButtonClear(this);
