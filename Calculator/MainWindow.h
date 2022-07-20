@@ -3,6 +3,11 @@
 #include "ButtonFactory.h"
 #include "CalculatorProcessor.h"
 #include "IBaseCommand.h"
+#include "Addition.h"
+#include "Subtraction.h"
+#include "Multiplication.h"
+#include "Division.h"
+#include "Mod.h"
 #include <vector>
 
 class MainWindow : public wxFrame
@@ -33,6 +38,8 @@ private:
 	wxTextCtrl* textBox;
 
 	CalculatorProcessor* processor = CalculatorProcessor::GetInstance();
+
+	std::vector<IBaseCommand*> commands;
 public:
 	MainWindow();
 	DECLARE_EVENT_TABLE()

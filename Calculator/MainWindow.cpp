@@ -28,8 +28,6 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(100,
 {
 	ButtonFactory buttonFactory;
 
-	std::vector<IBaseCommand*> commands;
-
 	textBox = buttonFactory.CreateTextBox(this);
 
 	buttonC = buttonFactory.CreateButtonClear(this);
@@ -77,9 +75,11 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 5: {
-		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //********************ADD
 		textBox->AppendText("+");
 		textBox->Clear();
+		Addition add;
+		commands.push_back(&add);
 		processor->SetOperator('+');
 		break;
 	}
@@ -102,9 +102,11 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 10: {
-		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //*********************Subtract
 		textBox->AppendText("-");
 		textBox->Clear();
+		Subtraction subtract;
+		commands.push_back(&subtract);
 		processor->SetOperator('-');
 		break;
 	}
@@ -127,9 +129,11 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 15: {
-		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //*****************Multiply
 		textBox->AppendText("*");
 		textBox->Clear();
+		Multiplication multiply;
+		commands.push_back(&multiply);
 		processor->SetOperator('*');
 		break;
 	}
@@ -139,9 +143,11 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 17: {
-		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));   //************************MOD
 		textBox->AppendText("%");
 		textBox->Clear();
+		Mod mod;
+		commands.push_back(&mod);
 		processor->SetOperator('%');
 		break;
 	}
@@ -160,9 +166,11 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 20: {
-		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));   //***********************Divide
 		textBox->AppendText("/");
 		textBox->Clear();
+		Division divide;
+		commands.push_back(&divide);
 		processor->SetOperator('/');
 		break;
 	}
