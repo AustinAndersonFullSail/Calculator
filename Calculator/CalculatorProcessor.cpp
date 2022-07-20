@@ -105,6 +105,4 @@ int CalculatorProcessor::Equals() {
 		return _baseNumber / _secondNumber;
 	else if (_operator == '%')
 		return _baseNumber % _secondNumber;
-	else
-		return 0;
 }
