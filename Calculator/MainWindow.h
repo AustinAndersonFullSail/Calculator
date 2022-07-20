@@ -1,7 +1,9 @@
 #pragma once
+#include <vector>
 #include "wx/wx.h"
 #include "ButtonFactory.h"
 #include "CalculatorProcessor.h"
+#include "IBaseCommand.h"
 
 class MainWindow : public wxFrame
 {
