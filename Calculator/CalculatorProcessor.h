@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
+#include "IBaseCommand.h"
 
-class CalculatorProcessor
+class CalculatorProcessor : public IBaseCommand
 {
 
 private:
@@ -28,4 +29,6 @@ public:
 	std::string GetBinary();
 
 	int Equals();
+
+	void Execute();
 };
