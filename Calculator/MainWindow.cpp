@@ -77,9 +77,8 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 5: {
-		//processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //********************ADD
-		numbers.push_back(wxAtoi(textBox->GetValue()));
-		//textBox->AppendText("+");
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //********************ADD
+		textBox->AppendText("+");
 		textBox->Clear();
 		Addition* add = new Addition();
 		commands.push_back(add);
@@ -105,9 +104,8 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 10: {
-		//processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //*********************Subtract
-		numbers.push_back(wxAtoi(textBox->GetValue()));
-		//textBox->AppendText("-");
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //*********************Subtract
+		textBox->AppendText("-");
 		textBox->Clear();
 		Subtraction* subtract = new Subtraction();
 		commands.push_back(subtract);
@@ -133,9 +131,8 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 15: {
-		//processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //*****************Multiply
-		numbers.push_back(wxAtoi(textBox->GetValue()));
-		//textBox->AppendText("*");
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));  //*****************Multiply
+		textBox->AppendText("*");
 		textBox->Clear();
 		Multiplication* multiply = new Multiplication();
 		commands.push_back(multiply);
@@ -148,9 +145,8 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 17: {
-		//processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));   //************************MOD
-		numbers.push_back(wxAtoi(textBox->GetValue()));
-		//textBox->AppendText("%");
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));   //************************MOD
+		textBox->AppendText("%");
 		textBox->Clear();
 		Mod* mod = new Mod();
 		commands.push_back(mod);
@@ -173,9 +169,8 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 		break;
 	}
 	case 20: {
-		//processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));   //***********************Divide
-		numbers.push_back(wxAtoi(textBox->GetValue()));
-		//textBox->AppendText("/");
+		processor->SetBaseNumber(wxAtoi(textBox->GetValue().ToStdString()));   //***********************Divide
+		textBox->AppendText("/");
 		textBox->Clear();
 		Division* divide = new Division();
 		commands.push_back(divide);
@@ -185,15 +180,13 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 	case 21: {
 		processor->SetSecondNumber(wxAtoi(textBox->GetValue().ToStdString()));
 		textBox->AppendText("=");
-		for (int i = 0;;)
+		textBox->Clear();
+		for (int i = 0; i < commands.size();)
 		{
 			textBox->Clear();
-			textBox->AppendText(std::to_string(commands[i]->Execute(numbers[i], numbers[i + 1])));
-			numbers.erase(numbers.begin());
-			numbers[i] = wxAtoi(textBox->GetValue());
+			processor->SetBaseNumber(commands[i]->Execute(processor->GetBaseNumber(), processor->GetSecondNumber()));
+			textBox->AppendText(std::to_string(processor->GetBaseNumber()));
 			commands.erase(commands.begin());
-			if (commands.size() == 2)
-				break;
 		}
 		//textBox->AppendText(std::to_string(processor->Equals()));
 		break;

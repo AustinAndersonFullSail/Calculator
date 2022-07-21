@@ -40,8 +40,6 @@ private:
 	CalculatorProcessor* processor = CalculatorProcessor::GetInstance();
 
 	std::vector<IBaseCommand*> commands;
-
-	std::vector<int> numbers;
 public:
 	MainWindow();
 	DECLARE_EVENT_TABLE()
