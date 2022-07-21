@@ -4,7 +4,7 @@
 class Mod : public IBaseCommand
 {
 public:
-	int ModIt(int num1, int num2) {
+	static int ModIt(int num1, int num2) {
 		return num1 % num2;
 	}
 
