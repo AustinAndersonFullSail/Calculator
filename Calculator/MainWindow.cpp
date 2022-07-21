@@ -180,7 +180,6 @@ void MainWindow::OnButtonClick(wxCommandEvent& evt)
 	case 21: {
 		processor->SetSecondNumber(wxAtoi(textBox->GetValue().ToStdString()));
 		textBox->AppendText("=");
-		textBox->Clear();
 		for (int i = 0; i < commands.size();)
 		{
 			textBox->Clear();

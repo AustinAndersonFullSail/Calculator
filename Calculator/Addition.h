@@ -6,7 +6,7 @@ class Addition : public IBaseCommand
 	int number;
 public:
 	int Add(int num1, int num2) {
-		return number + num2;
+		return num1 + num2;
 	}
 
 	int Execute(int base, int second) {
