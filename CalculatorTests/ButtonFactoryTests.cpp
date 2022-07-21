@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+#include "wx/wx.h"
 #include "../Calculator/ButtonFactory.h"
 #include "../Calculator/ButtonFactory.cpp"
 
