@@ -10,8 +10,9 @@ namespace CalculatorTests
 {
 	TEST_CLASS(ButtonFactoryTests)
 	{
-	public:
+	private:
 		CalculatorProcessor* processor = CalculatorProcessor::GetInstance();
+	public:
 
 		TEST_METHOD(CheckDecimalEleven) {
 			processor->SetBaseNumber(11);

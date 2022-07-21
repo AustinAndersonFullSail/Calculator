@@ -10,9 +10,10 @@ namespace CalculatorTests
 {
 	TEST_CLASS(ButtonFactoryTests)
 	{
-	public:
+	private:
 		ButtonFactory buttonFactory;
 		wxFrame* parent = new wxFrame(nullptr, wxID_ANY, "TempFrame", wxPoint(100, 100), wxSize(517, 640));
+	public:
 
 		TEST_METHOD(CheckClearID) {
 			wxButton* clear = buttonFactory.CreateButtonClear(parent);
