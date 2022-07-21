@@ -19,5 +19,10 @@ namespace CalculatorTests
 			int answer = Addition::Add(2, 2);
 			Assert::AreEqual(answer, 4);
 		}
+		TEST_METHOD(AddTwoPlusTwoNotEqualFive)
+		{
+			int answer = Addition::Add(2, 2);
+			Assert::AreNotEqual(answer, 5);
+		}
 	};
 }
