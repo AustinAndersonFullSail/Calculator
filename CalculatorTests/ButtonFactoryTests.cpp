@@ -11,9 +11,17 @@ namespace CalculatorTests
 	TEST_CLASS(ButtonFactoryTests)
 	{
 	public:
+		ButtonFactory buttonFactory;
+		wxFrame* parent = new wxFrame(nullptr, wxID_ANY, "TempFrame", wxPoint(100, 100), wxSize(517, 640));
 
-		TEST_METHOD(AddTwoPlusTwoEqualsFour) {
-
+		TEST_METHOD(CheckClearButtonID) {
+			wxButton* clear = buttonFactory.CreateButtonClear(parent);
+			wxWindowID one = 1;
+			Assert::AreEqual(clear->GetId(), one);
 		}
+
+		
+
+		
 	};
 }

@@ -8,7 +8,7 @@ private:
 	static CalculatorProcessor* _processor;
 	int _baseNumber = 0;
 	int _secondNumber = 0;
-	char _operator = ' ';
+	//char _operator = ' ';
 	CalculatorProcessor() {}
 public:
 	static CalculatorProcessor* GetInstance();
@@ -17,8 +17,8 @@ public:
 	int GetBaseNumber();
 	void SetSecondNumber(int number);
 	int GetSecondNumber();
-	void SetOperator(char operators);
-	char GetOperator();
+	//void SetOperator(char operators);
+	//char GetOperator();
 
 	CalculatorProcessor(CalculatorProcessor& copy) = delete;
 	void operator=(const CalculatorProcessor& assignment) = delete;
@@ -27,5 +27,5 @@ public:
 	std::string GetHexadecimal();
 	std::string GetBinary();
 
-	int Equals();
+	//int Equals();
 };

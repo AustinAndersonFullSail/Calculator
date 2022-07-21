@@ -25,13 +25,13 @@ int CalculatorProcessor::GetSecondNumber() {
 	return _secondNumber;
 }
 
-void CalculatorProcessor::SetOperator(char operators) {
-	_operator = operators;
-}
-
-char CalculatorProcessor::GetOperator() {
-	return _operator;
-}
+//void CalculatorProcessor::SetOperator(char operators) {
+//	_operator = operators;
+//}
+//
+//char CalculatorProcessor::GetOperator() {
+//	return _operator;
+//}
 
 std::string CalculatorProcessor::GetDecimal() {
 	return std::to_string(_baseNumber);
@@ -94,16 +94,17 @@ std::string CalculatorProcessor::GetBinary() {
 	return results;
 }
 
-int CalculatorProcessor::Equals() {
-	if (_operator == '+')
-		return _baseNumber + _secondNumber;
-	else if (_operator == '-')
-		return _baseNumber - _secondNumber;
-	else if (_operator == '*')
-		return _baseNumber * _secondNumber;
-	else if (_operator == '/')
-		return _baseNumber / _secondNumber;
-	else if (_operator == '%')
-		return _baseNumber % _secondNumber;
-	else return 0;
-}
+//int CalculatorProcessor::Equals() {
+//	if (_operator == '+')
+//		return _baseNumber + _secondNumber;
+//	else if (_operator == '-')
+//		return _baseNumber - _secondNumber;
+//	else if (_operator == '*')
+//		return _baseNumber * _secondNumber;
+//	else if (_operator == '/')
+//		return _baseNumber / _secondNumber;
+//	else if (_operator == '%')
+//		return _baseNumber % _secondNumber;
+//	else 
+//		return 0;
+//}
